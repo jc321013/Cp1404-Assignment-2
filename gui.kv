@@ -1,0 +1,86 @@
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        id: trip_location
+        font_size: 20
+        size_hint_y: 1
+        color: 0, 0, 0, 1
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Spinner:
+            id: spinner_details
+            size_hint_y: 1
+        TextInput:
+            text: ''
+            id: input_details
+            font_size: 48
+            size_hint_y: 1
+            on_text_validate: app.get_conversion('away')
+            multiline: False
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            id: home_country
+            font_size: 30
+            size_hint_y: 1
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        TextInput:
+            text: ''
+            id: input_details
+            font_size: 48
+            size_hint_y: 1
+            on_text_validate: app.get_conversion('home')
+            multiline: False
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            id: real_time
+            font_size: 20
+            size_hint_y: 1
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            id: trip_details
+            size_hint_x: 1
+            size_hint_y: 1
+        Button:
+            text: 'update currency'
+            id: 'update_currency'
+            size_hint_x: 1
+            size_hint_y: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
